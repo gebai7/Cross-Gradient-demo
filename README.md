@@ -1,13 +1,12 @@
 # Cross-Gradient Tool
-
 The Cross Gradient Method is a geophysical joint inversion technique that enhances geological consistency by enforcing structural similarity between different physical models. It utilizes the cross-product constraint of model gradient vectors to achieve structural coupling without relying on prior petrophysical relationships.
 
 
-
 ## Usage Guide
-### Initialization
-Running the Demo: python examples/demo_cross_gradient.py
-
+Running the Demo: 
+```
+python demo_cross_gradient.py
+```
 ```
 cg_solver = CrossGradient()
 cg_solver.dx_dz(
@@ -21,7 +20,19 @@ cg_solver.dx_dz(
     coef_y=2       # Y-direction smooth factor (default:2)
 )
 ```
+## Key Parameters
+### `a_b` Behavior Modes
+| Mode | Description | 
+|------|-------------|
+| `'ab'` | Bidirectional structural similarity between Model A and B |
+| `'a'`  | Unidirectional constraint: Model A adapts to match Model B's structure | 
+| `'b'`  | Unidirectional constraint: Model B adapts to match Model A's structure |
+| `'No'` | Disable cross-gradient constraints |
 
+### Dependencies
+* NumPy >= 1.21
+* SciPy >= 1.7
+* Matplotlib >= 3.5
 
 
 
