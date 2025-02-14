@@ -29,7 +29,7 @@ cg_solver.dx_dz(
 | `'b'`  | Unidirectional constraint: Model B adapts to match Model A's structure |
 | `'No'` | Disable cross-gradient constraints |
 
-![image]([https://github.com/用户名/仓库名/blob/分支名/图片文件路径](https://github.com/gebai7/Cross-Gradient-demo/blob/main/CG_demo/subplots.png))
+![image](https://github.com/gebai7/Cross-Gradient-demo/blob/main/CG_demo/subplots.png)
 
 ### Dependencies
 * NumPy >= 1.21
